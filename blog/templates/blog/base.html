@@ -1,3 +1,4 @@
+{% load blog_tags %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,7 @@
         <div id="sidebar">
             <h2>John Rees - TM470 blog</h2>
                 <p>This is my OU project blog.</p>
+                <p>I have written {% total_posts %} posts so far.</p>
         </div>
     </body>
 </html>
