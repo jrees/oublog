@@ -38,6 +38,8 @@ def post_detail(request, year, month, day, post):
     # List of active comments for this post
     comments = post.comments.filter(active=True)
 
+    comment_form = CommentForm()
+
     if request.method == 'POST':
             # A comment was posted
             comment_form = CommentForm(data=request.POST)
