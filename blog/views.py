@@ -38,6 +38,7 @@ def post_detail(request, year, month, day, post):
     # List of active comments for this post
     comments = post.comments.filter(active=True)
 
+    # not in tutorial, but without it you get 'local variable referenced before assignment'
     comment_form = CommentForm()
 
     if request.method == 'POST':
